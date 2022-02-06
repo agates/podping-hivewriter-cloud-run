@@ -7,6 +7,7 @@ The typescript/javascript code in this repository is a reference implementation 
 The code will need to be adapted to your project -- make sure not to commit the AUTH_KEY to version control nor make it public in any way.
 
 0. Optionally create a new project in GCP.  All of the resources below should be in the same project.  Whatever project you use, find the project ID and fill in the `PROJECT_ID` variable
+   * Enable the "Cloud Run" API
 1. Create a secret in the GCP secret manager, by default we call it "hive-posting-key".  If you use a different name, fill it in the `PODPING_HIVE_POSTING_KEY_SECRET_NAME` variable
    * Include the posting key for the Hive account you will be using.
 2. Create a service account, copy the email address to `SERVICE_ACCOUNT`
