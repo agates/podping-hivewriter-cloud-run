@@ -1,0 +1,27 @@
+{
+  "name": "podping-hivewriter-cloud-run",
+  "version": "1.0.0",
+  "description": "1. Create a secret in gcloud secret manager    * Include the posting key for the Hive account you will be using. 2. ... TBD javascript code to run the CLI command below",
+  "main": "run.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agates/podping-hivewriter-cloud-run.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agates/podping-hivewriter-cloud-run/issues"
+  },
+  "homepage": "https://github.com/agates/podping-hivewriter-cloud-run#readme",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "@googleapis/run": "^7.0.0"
+  }
+}

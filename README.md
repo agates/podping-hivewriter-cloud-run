@@ -1,8 +1,21 @@
 # podping-hivewriter on gcloud with cloud run
 
-1. Create a secret in gcloud secret manager
+The typescript/javascript code in this repository is a reference implementation of running podping-hivewriter as an ad-hoc container to publish updates to podping.  This runs it in "write" mode.
+
+The code will need to be adapted to your project -- make sure not to commit the AUTH_KEY to version control nor make it public in any way.
+
+0. Optionally create a new project in GCP.  All of the resources below should be in the same project.  Whatever project you use, find the project ID and fill in the `PROJECT_ID` variable
+1. Create a secret in the GCP secret manager, by default we call it "hive-posting-key".  If you use a different name, fill it in the `PODPING_HIVE_POSTING_KEY_SECRET_NAME` variable
    * Include the posting key for the Hive account you will be using.
-2. ... TBD javascript code to run the CLI command below
+2. Create a service account, copy the email address to `SERVICE_ACCOUNT`
+   * Give it the "Service Account User" role
+   * Generate a new Key as JSON, download the file, and copy the contents to `AUTH_KEY`.  
+3. Go to IAM and edit the new service account you created.  Ensure it has the following roles:
+   * "Service Account User"
+   * "Cloud Run Admin"
+   * "Secret Manager Secret Accessor"
+4. Fill in `PODPING_HIVE_ACCOUNT` with your own Hive account
+5. Test
 
 
 ## Example CLI command
