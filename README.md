@@ -1,5 +1,7 @@
 # podping-hivewriter on gcloud with cloud run
 
+## Example Typescript/Javascript code
+
 The typescript/javascript code in this repository is a reference implementation of running podping-hivewriter as an ad-hoc container to publish updates to podping.  This runs it in "write" mode.
 
 The code will need to be adapted to your project -- make sure not to commit the AUTH_KEY to version control nor make it public in any way.
